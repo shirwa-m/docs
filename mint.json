@@ -57,14 +57,6 @@
       ]
     },
     {
-  "api": {
-    "baseUrl": "https://durio.io/api",
-    "auth": {
-      "method": "bearer"
-    }
-  }
-},
-    {
       "group": "Endpoint Examples",
       "pages": [
         "api-reference/endpoint/get-accounts",
