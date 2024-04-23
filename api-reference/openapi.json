@@ -132,7 +132,7 @@
   },
   "components": {
     "schemas": {
-      "Plant": {
+      "Account": {
         "required": [
           "name"
         ],
@@ -148,7 +148,7 @@
           }
         }
       },
-      "NewPlant": {
+      "NewAccount": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Account"
