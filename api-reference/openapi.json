@@ -41,7 +41,20 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Account"
+                    "required": [
+                      "name"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "description": "The name of the account",
+                        "type": "string"
+                      },
+                      "tag": {
+                        "description": "Tag to specify the type",
+                        "type": "string"
+                      }
+                    }
                   }
                 }
               }
@@ -52,7 +65,20 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -66,7 +92,37 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlant"
+                "allOf": [
+                  {
+                    "required": [
+                      "name"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "description": "The name of the account",
+                        "type": "string"
+                      },
+                      "tag": {
+                        "description": "Tag to specify the type",
+                        "type": "string"
+                      }
+                    }
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "description": "Identification number of the account",
+                        "type": "integer",
+                        "format": "int64"
+                      }
+                    }
+                  }
+                ]
               }
             }
           },
@@ -78,7 +134,20 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Account"
+                  "required": [
+                    "name"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "description": "The name of the account",
+                      "type": "string"
+                    },
+                    "tag": {
+                      "description": "Tag to specify the type",
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -88,7 +157,20 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -121,7 +203,20 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -151,7 +246,20 @@
       "NewAccount": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Account"
+            "required": [
+              "name"
+            ],
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "The name of the account",
+                "type": "string"
+              },
+              "tag": {
+                "description": "Tag to specify the type",
+                "type": "string"
+              }
+            }
           },
           {
             "required": [
