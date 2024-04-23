@@ -96,7 +96,7 @@
         }
       }
     },
-    "/plants/{id}": {
+    "/accounts/{id}": {
       "delete": {
         "description": "Deletes a single account based on the ID supplied",
         "parameters": [
