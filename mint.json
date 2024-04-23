@@ -67,9 +67,9 @@
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/get-accounts",
+        "api-reference/endpoint/post-accounts",
+        "api-reference/endpoint/delete-accounts"
       ]
     }
   ],
